@@ -50,6 +50,7 @@ Complete documentation is available as part of the project:
 - Infrastructure Description: `docs/spec.md`
 - Module Development: `modules/`
 - CRD and Operator Development: `operator/`
+- [CIC as a Cognitive Model – Full Essay](https://github.com/CentralInfraCore/.github/blob/main/docs/cic-model-essay.md)
 
 ## Additional Information
 
