@@ -57,4 +57,11 @@ Contact and Support:
 
 - Project Lead: Gábor Zoltán Sinkó
 
+## 🔐 License
+
+This work is licensed under  
+**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**  
+See [`LICENSE.md`](./LICENSE.md) for full terms.
+
+> Commercial integration into proprietary systems is only allowed with explicit written permission.
 
