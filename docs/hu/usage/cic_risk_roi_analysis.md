@@ -142,3 +142,8 @@ A CentralInfraCore (CIC) egy validálási és kontrollréteg, amelynek célja a 
 ## 📍 Záró megjegyzés
 
 A CIC nem csak technológia, hanem működésfilozófia is: a **bizalom újradefiniálása rendszerszintű validáción keresztül**.
+
+---
+
+<sub>This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. 
+Mint az egész CIC-re. A szöveg a szerző és a ChatGPT közös munkája során készült, iteratív és kontextusérzékeny módon.</sub>
