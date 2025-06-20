@@ -2,66 +2,79 @@
 
 ## Introduction
 
-CentralInfraCore is a unified infrastructure descriptor system providing complete lifecycle management, from hardware procurement to fully operational hybrid cloud environments. Its goal is to create a declarative, object-oriented infrastructure management model offering transparency, modularity, and comprehensive state management with version control.
+CentralInfraCore is a unified infrastructure descriptor system offering full lifecycle management—from hardware procurement to fully operational hybrid cloud environments. It introduces not only a technical toolkit, but also a structured way of thinking that has the potential to reshape infrastructure management and the DevOps mindset.
 
-## Key Features
+## Key Architectural Features
 
-- **Declarative Description**: Unified YAML-based configuration organized into hierarchical, graph-like structures for infrastructure definition.
-- **Modular Architecture**: Implementation details encapsulated in modular components, independently understandable and maintainable.
-- **Event-Driven Operations**: Components communicate through event-driven processes and scheduled state queries, enabling dynamic scalability and rapid response.
-- **State Management**: Continuous tracking, versioning, and auditability of all changes, ensuring accurate infrastructure representation.
+* **Declarative Infrastructure Definition**: Every component is described using a YAML-based, graph-like structure, providing full transparency into the system's design and state.
+* **Object-Oriented Modularity**: Each function is organized into modules that are independently understandable, testable, and verifiable.
+* **Event- and State-Driven Operation**: Instead of executing commands, the system tracks and reacts to state—each change passes through validated relay logic.
+* **Versioned and Auditable State Logic**: All state and structural changes are logged and traceable, supporting full reproducibility and introspection.
 
 ## Infrastructure Descriptor Object Model
 
-The infrastructure descriptor is structured as a directed graph:
+The CentralInfraCore model is a directed graph in which every object has a well-defined role and connection logic. This allows both semantic and state-based interpretation of the entire infrastructure.
 
-- **Core Objects**: Independently meaningful entities with standalone lifecycle management.
-- **Submodules**: Objects containing parameter sets, default values, or derived values.
-- **Mutually Exclusive Values**: Certain variables exclude each other to maintain consistency (e.g., variable "A" excludes the presence of "B").
+* **Core Objects**: Independent entities with their own lifecycle, such as physical nodes, clusters, or relay endpoints.
+* **Submodules**: Supporting components containing parameter sets or derived/default values. They cannot function independently but are essential for higher-level objects.
+* **Semantic Exclusions**: Certain attributes exclude one another to ensure system consistency (e.g., if attribute “A” is active, “B” must be absent).
 
 ## Implementation and Integration
 
-The system supports diverse implementations:
+CentralInfraCore is not bound to a specific platform. Instead, it adapts to different environments through modular APIs and logic-based adapters tailored to the infrastructure.
 
-- **Kubernetes Integration**: Supports Helm Charts via FluxCD, ArgoCD, and Rancher Fleet.
-- **Traditional System Integration**: Unified APIs manage non-cloud-native environments.
-- **Modular API Layer**: External operators and management tools interface through modular APIs, separating specific implementation details from infrastructure definitions.
+* **Kubernetes Integration**: Supports Helm Chart-based deployments and tools like FluxCD, ArgoCD, or Rancher Fleet. Synchronization includes both deployment and state.
+* **Traditional Environments**: The declarative model can be applied via API to virtualized or traditional Linux systems.
+* **Modular API Layer**: Interfaces are exposed as standalone modules, allowing external systems to integrate at the exact level required, without compromising stability or scalability.
 
 ## GitOps Approach
 
-CentralInfraCore adheres to a GitOps-driven operational model:
+CentralInfraCore not only adopts GitOps—it extends it. The system treats Git not just as a version source, but as a real-time reference of infrastructure state.
 
-- **Central Git Repository**: Version-controlled infrastructure descriptions organized within a clear directory structure.
-- **Automated Deployment**: Automated application and validation of state changes driven by Git commits.
-- **Continuous Integration (CI) & Continuous Delivery (CD)**: Enhanced testability and rapid iteration, minimizing redundancy.
+* **Central Git Repository**: Infrastructure states and descriptions are stored in structured directories. A Git commit triggers not just a change, but a validated state transition.
+* **Automated and Validated Execution**: Every change is applied through schema validation and relay-controlled flows, enabling meaningful automation.
+* **CI/CD at the Knowledge Level**: Integration occurs not just at code level, but at the knowledge layer. Logic and state are both testable and traceable.
 
 ## Use Cases
 
-CentralInfraCore is ideal for enterprise environments:
+CentralInfraCore is more than a toolset for managing complex infrastructures—it is a mindset shift in how infrastructure is described, validated, and maintained.
 
-- Operating complex infrastructures (physical, virtualized, Kubernetes).
-- Requiring precise version control, auditability, and rapid recovery capabilities.
-- Managing hybrid infrastructure with a need for flexibility and modular scalability.
+It is especially effective in environments that:
 
-## Documentation
+* Require unified visibility and control over physical, virtualized, and container-based systems.
+* Demand traceable, versioned, and rollback-capable state representation.
+* Need scalable, modular architecture that supports organizational growth.
+* Value configurations that are interpretable, enforceable, and reversible by both humans and machines.
 
-Complete documentation is available as part of the project:
+CIC is especially powerful when the goal is to align thinking with execution—not just deploy code, but operate with infrastructure-level cognition.
 
-- Infrastructure Description: `docs/spec.md`
-- Module Development: `modules/`
-- CRD and Operator Development: `operator/`
+## Documentation Structure
+
+This repository provides a layered documentation system for both human and machine understanding:
+
+* **Bilingual conceptual knowledge base**: `docs/`
+
+    * `interaction/`: role-based introductory content (e.g., DevOps, PM, Architect)
+    * `reality/`: infrastructure logic (e.g., relay, state, schema)
+    * `concept/`: the mindset and theoretical foundations
+    * `usage/`: lifecycle, rollback, schema evolution examples
+
+* **AI-compatible navigation layer**:
+
+    * Educational prompts: `prompts/`
+    * Machine navigation map: `_ai_prompt_index.yaml`
+    * Structural metadata: `meta/cic.yaml`
+
+This structure enables users—human or AI—to access the system’s logic at different depths and perspectives.
 
 ## Additional Information
 
 Contact and Support:
 
-- Project Lead: Gábor Zoltán Sinkó
+* Project Lead: Gábor Zoltán Sinkó
 
-## 🔐 License
+## License
 
-This work is licensed under  
-**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**  
-See [`LICENSE.md`](./LICENSE.md) for full terms.
+This project is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-> Commercial integration into proprietary systems is only allowed with explicit written permission.
-
+*This document was created in collaboration with artificial intelligence and refined through human validation.*

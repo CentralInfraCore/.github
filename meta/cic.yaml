@@ -1,0 +1,47 @@
+project: CIC
+name: Central Infrastructure Core
+version: 0.1
+schema_model: relay-driven declarative infrastructure model
+
+entrypoints:
+
+  - type: relay
+    purpose: Validate and forward schema-bound infrastructure descriptions
+    targets:
+      - modules
+      - renderers
+      - state evaluators
+
+  - type: ai\_prompt\_index
+    purpose: AI-assisted navigation of conceptual structure
+    file: \_ai\_prompt\_index.yaml
+
+  - type: docs
+    purpose: Human-readable, multilingual documentation structure
+    folder: docs/
+
+components:
+
+  - name: schema
+    description: Defines structure, defaults, and validation rules for each object type
+
+  - name: state
+    description: Tracks declared, derived, and observed state
+
+  - name: relay
+    description: Executes state transitions through schema-driven flows
+
+  - name: crd\_adapter
+    description: Optional Kubernetes-native mapping via CustomResourceDefinitions
+
+  - name: prompt\_interface
+    description: Entry point for structured conversational guidance, via `prompts/`
+
+status:
+maturity: PoC-ready
+coverage: self-signed cert use case included
+future:
+  - role-based routing
+  - async validation
+  - multi-cluster graph handling
+
