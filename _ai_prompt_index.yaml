@@ -1,0 +1,29 @@
+project: CIC
+description: Central Infrastructure Core – infrastructure PoC relay model
+version: 0.1
+
+prompts:
+  - id: "intro\_to\_cic"
+    title: "What is the CIC PoC?"
+    file: "prompts/intro\_to\_cic.md"
+
+  - id: "relay\_flow"
+    title: "How does Relay Flow work?"
+    file: "prompts/relay\_flow\.md"
+
+  - id: "schema\_handling"
+    title: "What is the role of schemas?"
+    file: "prompts/schema\_handling.md"
+
+  - id: "state\_tracking"
+    title: "How is state managed and restored?"
+    file: "prompts/state\_tracking.md"
+
+  - id: "selfsigned\_cert\_model"
+    title: "How does self-signed certificate management work?"
+    file: "prompts/selfsigned\_cert\_model.md"
+
+  - id: "devops\_transformation"
+    title: "What does this mean for the future of DevOps?"
+    file: "prompts/devops\_transformation.md"
+
